@@ -76,7 +76,15 @@ print('{0:^40}'.format('press any key!!'))
 
 # step 7
 # 카드 게임
-# 트럼프 카드 종류 -> 4타입, 타입별로 13장의 카드가 존재
+
+# 트럼프카드 => 타입이 4개, 타입별 카드가 13장
+# 총 카드 수 = 13 * 4  = 52 -> 일렬로 배치시
+CARD_TYPE =4
+CARD_PER_TYPE_SIZE =13
+TOTAL_CARD_COUNT = CARD_TYPE * CARD_PER_TYPE_SIZE
+# 모든 카드 생성
+all_cards = list(range(TOTAL_CARD_COUNT))
+
 # A는 합산값의 *2을 한다 : ex) A, 3 => (1+3)*2 = 8점
 # J=>11, Q=>12, K=-5
 '''
@@ -86,14 +94,7 @@ print('{0:^40}'.format('press any key!!'))
 ◆ : A,2 ~ 10, J, Q, K
 '''
 
-# 트럼프카드 => 타입이 4개, 타입별 카드가 13장
-# 총 카드 수 = 13 * 4  = 52 -> 일렬로 배치시
-CARD_TYPE =4
-CARD_PER_TYPE_SIZE =13
-TOTAL_CARD_COUNT = CARD_TYPE * CARD_PER_TYPE_SIZE
-# 모든 카드 생성
-all_cards = list(range(TOTAL_CARD_COUNT))
-# 1. 게임이 시작하면 카드를 섞는다 => 셔플 => random 모듈을 활용(외장함수, 구현을 위해 사용)
+# 1. 게임이 시작하면 카드를 섞음 => 셔플 => random 모듈을 활용(외장함수, 구현을 위해 사용)
 seq = list('♠◆♥♣')
 nums = list('A23456789') + ['10'] + list('JQK')
 # 카드 초기화
@@ -162,4 +163,3 @@ target_data = ori_data[:]
 random.seed(1) # seed 고정하면 난수가 나오는 순서가 동일(일정한 결과가 나옴)
 # 일정한 결과를 내면 항상 같은 결과가 나오는 실험환경을 구축할 수 있다.
 # 변수를 바꿔가면서 영향성 등 분석할 수 있다.
-
