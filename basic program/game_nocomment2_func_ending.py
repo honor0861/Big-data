@@ -42,7 +42,7 @@ def step1():
 
 def step2():
     while True:
-        tmp = input("게임 제목을 입력하시오, 단 {}자 \이내로 입력 가능합니다. => ".format(GAME_TITLE_LEN_MAX)).strip()       
+        tmp = input("게임 제목을 입력하시오, 단 {}자 \이내로 입력 가능합니다. => ".format(GAME_TITLE_LEN_MAX)).strip()
         if not tmp:
             print("정확하게 입력하세요!")
         elif len(tmp)>GAME_TITLE_LEN_MAX:
@@ -199,4 +199,7 @@ def step7():
     # # 2) 누군가가 파일명.py를 가져와서 사용하면 => __name__ => '파일명'
     # print( '__name__ => ', __name__ )
     # if __name__ == '__main__':
-main()
+if __name__ == '__main__':
+    main()
+else:
+    print('누군가가 나를 모듈로 불러서 특정 기능을 쓰려고 한다')
