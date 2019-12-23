@@ -1,5 +1,5 @@
 # 1. 모듈 가져오기
-import random # 모듈가져오기
+import random # 모듈 가져오기
 import time   # 시간
 
 # 2. 전역변수 정의
@@ -19,7 +19,6 @@ score_table[ 'K' ]  = -5
 player_name         = None
 myTotalScore        = 0
 game_level          = 0
-
 isOneGaming         = True
 
 # 3. 함수들 나열
@@ -54,8 +53,7 @@ def step2():
     print( 'gameTitle', gameTitle )
     # gameTitle은 절차적 코드에서는 그냥 사용해도 되나,
     # 함수지향적으로 전개해서 함수 내부로 가면 지역변수가 된다
-    # 함수 밖에서 사용이 불가하므로, 값을 리턴하거나, 아예 
-    # 전역 변수로 빼야 한다
+    # 함수 밖에서 사용이 불가하므로, 값을 리턴하거나, 아예 전역 변수로 빼야 한다
     return gameTitle
 
 def step3():
@@ -107,6 +105,7 @@ def step6(gameTitle):
     while True:input();break # 한줄에 여러문장을 기술할때는 구분자로 ; 사용
 
 def step7():
+    # isOneGaming, myTotalScore가 전역 변수임을 알림 => 이를 통해서 수정을 가능하게끔 함
     global isOneGaming
     global myTotalScore 
 
