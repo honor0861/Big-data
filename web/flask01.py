@@ -7,7 +7,7 @@ import cx_Oracle as oci
 # pip install cx_oracle (cx_Oracle 패키지 모듈들은 Import, Anaconda Prompt에서 설치)
 
 # 아이디/암호@ 서버주소:포트번호/SID
-conn = oci.connect('admin/1234@192.168.99.100:32764/xe', encoding="utf-8")
+conn = oci.connect('admin/1234@192.168.99.100:32764/xe', encoding="utf-8") # 환경 설정
 # Oracle 서버와 연결
 cursor = conn.cursor() 
 # cursor 객체 얻어오기
