@@ -22,5 +22,4 @@ sql = """
 arr = ['a1','a1', '홍길동','33']
 cursor.execute(sql, arr)
 conn.commit()
-
 # unique constraint (ADMIN.MEMBER_PK) violated : 무결성 제약조건

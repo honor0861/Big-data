@@ -25,6 +25,5 @@ sql = """
     """ # 한글 인식이 안됨, 순서도 상관없음(알아서 찾아감)
 cursor.execute(sql, data2)
 conn.commit()
-
 # print(data2)
 # print(type(data2))

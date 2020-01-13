@@ -32,5 +32,3 @@ sql = """
     """ # key를 넣어줘야 인식이 됨(:ID, :PW를 넣어줘야 함) / 리스트와 튜플은 (:1, :2, :3, :4)
 cursor.execute(sql, ret)
 conn.commit()
-
-

@@ -1,4 +1,4 @@
-# # 파일명 : json03.py - 웹에서 가져온 거
+# 파일명 : json03.py - 웹에서 가져온 거
 import requests
 import json
 import cx_Oracle as oci

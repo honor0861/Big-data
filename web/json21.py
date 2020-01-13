@@ -32,7 +32,7 @@ data3 = data2['dailyBoxOfficeList']
 
 for tmp in data3:
 
-    print(tmp['rankOldAndNew'])
+    print(tmp['rankOldAndNew'])cd
     print(tmp['movieNm'])
     print(tmp['salesShare'])
     print(tmp['salesAcc'])

@@ -11,5 +11,3 @@ data1 = table.find()
 for tmp in data1:
     print(tmp)
 conn.close()
-
-
