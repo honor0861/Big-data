@@ -10,16 +10,23 @@ rdr = csv.reader(f)
 next(rdr, None) # 컬럼 skip
 
 edu = list()
+area_zone_si = list()
+area_zone_gu = list()
 is_cctv = list()
 num_cctv = list()
 road_width = list()
+
 for line in rdr:
     edu.append(line[0])
+    area_zone_si.append(line[2][0:5])
+    area_zone_gu.append(line[2][6:9])
     is_cctv.append(line[8])
     num_cctv.append(line[9])
     road_width.append(line[10])
 
 print(edu)
+print(area_zone_si)
+print(area_zone_gu)
 print(is_cctv)
 print(num_cctv)
 print(road_width)
