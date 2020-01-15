@@ -5,20 +5,23 @@ conn = pymongo.MongoClient('192.168.99.100', 32766)
 db = conn.get_database("area1")
 coll = db.get_collection("table")
 
-f = open('C:\\Users\\admin\\Desktop\\python_projects\\area\\busan1.csv','r')
+f = open('./py_projects/web/resources/busan01.csv','r',encoding = "utf-8")
 rdr = csv.reader(f)
 next(rdr, None) # 컬럼 skip
 
 edu = list()
 is_cctv = list()
 num_cctv = list()
-load_
+road_width = list()
 for line in rdr:
-    print(line[0])
-    # print(type(line))
-    # print(line)
-    #del(line[1:7])
-    #del(line[5])
-    #print(line)
-    
+    edu.append(line[0])
+    is_cctv.append(line[8])
+    num_cctv.append(line[9])
+    road_width.append(line[10])
+
+print(edu)
+print(is_cctv)
+print(num_cctv)
+print(road_width)
+
 conn.close()
