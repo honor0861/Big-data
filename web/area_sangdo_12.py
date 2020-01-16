@@ -3,9 +3,9 @@ import pymongo
 
 conn = pymongo.MongoClient('192.168.99.100', 32766)
 db = conn.get_database("area1")
-coll = db.get_collection("sangdo4")
+coll = db.get_collection("sangdo12")
 
-f = open('./py_projects/web/resources/sangdo4.csv','r',encoding = "utf-8")
+f = open('./py_projects/web/resources/sangdo12.csv','r',encoding = "utf-8")
 rdr = csv.reader(f)
 column = next(rdr, None) # 컬럼 skip
 
